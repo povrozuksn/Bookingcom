@@ -16,5 +16,17 @@ namespace Bookingcom
         {
             InitializeComponent();
         }
+
+        private void FiltrButton_Click(object sender, EventArgs e)
+        {
+            if(FiltrPanel.Height < 140)
+            {
+                FiltrPanel.Height = 140;
+            }
+            else
+            {
+                FiltrPanel.Height = 35;
+            }
+        }
     }
 }
