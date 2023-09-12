@@ -1,0 +1,11 @@
+C:\Users\root\source\repos\Bookingcom\Bookingcom\bin\Debug\Bookingcom.exe.config
+C:\Users\root\source\repos\Bookingcom\Bookingcom\bin\Debug\Bookingcom.exe
+C:\Users\root\source\repos\Bookingcom\Bookingcom\bin\Debug\Bookingcom.pdb
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.csproj.AssemblyReference.cache
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.csproj.SuggestedBindingRedirects.cache
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.MainForm.resources
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.Properties.Resources.resources
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.csproj.GenerateResource.cache
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.csproj.CoreCompileInputs.cache
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.exe
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.pdb
