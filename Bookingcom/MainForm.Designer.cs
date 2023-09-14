@@ -179,7 +179,7 @@
             // 
             this.FiltrButton.Location = new System.Drawing.Point(0, 0);
             this.FiltrButton.Name = "FiltrButton";
-            this.FiltrButton.Size = new System.Drawing.Size(112, 35);
+            this.FiltrButton.Size = new System.Drawing.Size(112, 34);
             this.FiltrButton.TabIndex = 7;
             this.FiltrButton.Text = "Фильтр";
             this.FiltrButton.UseVisualStyleBackColor = true;
@@ -235,11 +235,11 @@
             this.InfoPanel.Controls.Add(this.label8);
             this.InfoPanel.Controls.Add(this.pictureBox1);
             this.InfoPanel.Controls.Add(this.label7);
-            this.InfoPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.InfoPanel.Location = new System.Drawing.Point(0, 206);
+            this.InfoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InfoPanel.Location = new System.Drawing.Point(0, 198);
             this.InfoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.InfoPanel.Name = "InfoPanel";
-            this.InfoPanel.Size = new System.Drawing.Size(1132, 303);
+            this.InfoPanel.Size = new System.Drawing.Size(1132, 311);
             this.InfoPanel.TabIndex = 2;
             // 
             // pictureBox2
@@ -251,6 +251,8 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "Гостиница \"Венец\"";
+            this.pictureBox2.Click += new System.EventHandler(this.Hotel_Click);
             // 
             // label8
             // 
@@ -270,6 +272,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "Гостиница \"Советская\"";
+            this.pictureBox1.Click += new System.EventHandler(this.Hotel_Click);
             // 
             // label7
             // 
