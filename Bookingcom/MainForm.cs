@@ -32,7 +32,15 @@ namespace Bookingcom
         private void Hotel_Click(object sender, EventArgs e)
         {
             PictureBox pb = (PictureBox)sender;
-            HotelForm hotelForm = new HotelForm(pb.Tag.ToString());
+            HotelForm hotelForm = new HotelForm(pb.Tag.ToString(), 5);
+            hotelForm.ShowDialog();
+        }
+
+        private void labelHotel_Click(object sender, EventArgs e)
+        {
+            Label lb = (Label)sender;
+            string[] text = lb.Text.Split(new char[] { '"' });
+            HotelForm hotelForm = new HotelForm(text[1], 5);
             hotelForm.ShowDialog();
         }
     }
