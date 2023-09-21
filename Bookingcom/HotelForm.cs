@@ -12,9 +12,12 @@ namespace Bookingcom
 {
     public partial class HotelForm : Form
     {
+        string _hotelName;
         public HotelForm(string hotelName, int ratingHotel)
         {
             InitializeComponent();
+
+            _hotelName = hotelName;
 
             Text = "Гостиница \"" + hotelName + "\"";
             HotelLabel.Text = "Гостиница \"" + hotelName + "\"";
@@ -37,6 +40,13 @@ namespace Bookingcom
         private void HotelForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Room_Click(object sender, EventArgs e)
+        {
+            PictureBox pb = (PictureBox)sender;
+            RoomForm rf = new RoomForm(_hotelName, pb.Tag.ToString());
+            rf.ShowDialog();
         }
     }
 }
