@@ -11,3 +11,5 @@ C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.exe
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.pdb
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.HotelForm.resources
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.RoomForm.resources
+C:\Users\root\source\repos\Bookingcom\Bookingcom\bin\Debug\MySql.Data.dll
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.csproj.CopyComplete
