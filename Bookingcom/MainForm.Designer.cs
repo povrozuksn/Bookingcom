@@ -48,11 +48,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.InfoPanel.SuspendLayout();
@@ -212,12 +209,6 @@
             // CityComboBox
             // 
             this.CityComboBox.FormattingEnabled = true;
-            this.CityComboBox.Items.AddRange(new object[] {
-            "Москва",
-            "Ульяновск",
-            "Самара",
-            "Пенза",
-            "Екатеринбург"});
             this.CityComboBox.Location = new System.Drawing.Point(128, 59);
             this.CityComboBox.Name = "CityComboBox";
             this.CityComboBox.Size = new System.Drawing.Size(185, 32);
@@ -235,11 +226,8 @@
             // InfoPanel
             // 
             this.InfoPanel.Controls.Add(this.pictureBox3);
-            this.InfoPanel.Controls.Add(this.label9);
             this.InfoPanel.Controls.Add(this.pictureBox2);
-            this.InfoPanel.Controls.Add(this.label8);
             this.InfoPanel.Controls.Add(this.pictureBox1);
-            this.InfoPanel.Controls.Add(this.label7);
             this.InfoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InfoPanel.Location = new System.Drawing.Point(0, 198);
             this.InfoPanel.Margin = new System.Windows.Forms.Padding(4);
@@ -259,17 +247,6 @@
             this.pictureBox3.Tag = "Волга";
             this.pictureBox3.Click += new System.EventHandler(this.Hotel_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(651, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(173, 27);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Гостиница \"Волга\"";
-            this.label9.Click += new System.EventHandler(this.labelHotel_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -282,17 +259,6 @@
             this.pictureBox2.Tag = "Венец";
             this.pictureBox2.Click += new System.EventHandler(this.Hotel_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(338, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(176, 27);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Гостиница \"Венец\"";
-            this.label8.Click += new System.EventHandler(this.labelHotel_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -304,17 +270,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "Советская";
             this.pictureBox1.Click += new System.EventHandler(this.Hotel_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(23, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(212, 27);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Гостиница \"Советская\"";
-            this.label7.Click += new System.EventHandler(this.labelHotel_Click);
             // 
             // MainForm
             // 
@@ -333,7 +288,6 @@
             this.FiltrPanel.ResumeLayout(false);
             this.FiltrPanel.PerformLayout();
             this.InfoPanel.ResumeLayout(false);
-            this.InfoPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -362,11 +316,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button FiltrButton;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label9;
     }
 }
 
