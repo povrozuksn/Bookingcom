@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.AuthPanel = new System.Windows.Forms.Panel();
             this.PassTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,15 +46,8 @@
             this.CityComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.InfoPanel = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
-            this.InfoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // AuthPanel
@@ -70,7 +62,7 @@
             this.AuthPanel.Location = new System.Drawing.Point(0, 0);
             this.AuthPanel.Margin = new System.Windows.Forms.Padding(4);
             this.AuthPanel.Name = "AuthPanel";
-            this.AuthPanel.Size = new System.Drawing.Size(1132, 58);
+            this.AuthPanel.Size = new System.Drawing.Size(1313, 58);
             this.AuthPanel.TabIndex = 0;
             // 
             // PassTextBox
@@ -131,7 +123,7 @@
             this.FiltrPanel.Location = new System.Drawing.Point(0, 58);
             this.FiltrPanel.Margin = new System.Windows.Forms.Padding(4);
             this.FiltrPanel.Name = "FiltrPanel";
-            this.FiltrPanel.Size = new System.Drawing.Size(1132, 140);
+            this.FiltrPanel.Size = new System.Drawing.Size(1313, 140);
             this.FiltrPanel.TabIndex = 1;
             // 
             // FindButton
@@ -225,57 +217,18 @@
             // 
             // InfoPanel
             // 
-            this.InfoPanel.Controls.Add(this.pictureBox3);
-            this.InfoPanel.Controls.Add(this.pictureBox2);
-            this.InfoPanel.Controls.Add(this.pictureBox1);
             this.InfoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InfoPanel.Location = new System.Drawing.Point(0, 198);
             this.InfoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.InfoPanel.Name = "InfoPanel";
-            this.InfoPanel.Size = new System.Drawing.Size(1132, 311);
+            this.InfoPanel.Size = new System.Drawing.Size(1313, 311);
             this.InfoPanel.TabIndex = 2;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(655, 62);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(270, 184);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Tag = "Волга";
-            this.pictureBox3.Click += new System.EventHandler(this.Hotel_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(342, 62);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(270, 184);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "Венец";
-            this.pictureBox2.Click += new System.EventHandler(this.Hotel_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 184);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "Советская";
-            this.pictureBox1.Click += new System.EventHandler(this.Hotel_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 509);
+            this.ClientSize = new System.Drawing.Size(1313, 509);
             this.Controls.Add(this.InfoPanel);
             this.Controls.Add(this.FiltrPanel);
             this.Controls.Add(this.AuthPanel);
@@ -287,10 +240,6 @@
             this.AuthPanel.PerformLayout();
             this.FiltrPanel.ResumeLayout(false);
             this.FiltrPanel.PerformLayout();
-            this.InfoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,9 +264,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button FiltrButton;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

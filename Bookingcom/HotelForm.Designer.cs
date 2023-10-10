@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HotelForm));
             this.HotelPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.HotelTextBox = new System.Windows.Forms.TextBox();
             this.HotelLabel = new System.Windows.Forms.Label();
             this.HotelPictureBox = new System.Windows.Forms.PictureBox();
             this.InfoPanel = new System.Windows.Forms.Panel();
@@ -51,7 +51,7 @@
             // HotelPanel
             // 
             this.HotelPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.HotelPanel.Controls.Add(this.textBox1);
+            this.HotelPanel.Controls.Add(this.HotelTextBox);
             this.HotelPanel.Controls.Add(this.HotelLabel);
             this.HotelPanel.Controls.Add(this.HotelPictureBox);
             this.HotelPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,16 +61,15 @@
             this.HotelPanel.Size = new System.Drawing.Size(1163, 288);
             this.HotelPanel.TabIndex = 0;
             // 
-            // textBox1
+            // HotelTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(415, 148);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(458, 116);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Лучшая гостиница в своем классе\r\nСервис высокого качества.";
+            this.HotelTextBox.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HotelTextBox.Location = new System.Drawing.Point(415, 148);
+            this.HotelTextBox.Multiline = true;
+            this.HotelTextBox.Name = "HotelTextBox";
+            this.HotelTextBox.ReadOnly = true;
+            this.HotelTextBox.Size = new System.Drawing.Size(458, 116);
+            this.HotelTextBox.TabIndex = 3;
             // 
             // HotelLabel
             // 
@@ -199,7 +198,7 @@
 
         private System.Windows.Forms.Panel HotelPanel;
         private System.Windows.Forms.Panel InfoPanel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox HotelTextBox;
         private System.Windows.Forms.Label HotelLabel;
         private System.Windows.Forms.PictureBox HotelPictureBox;
         private System.Windows.Forms.PictureBox pictureBox4;

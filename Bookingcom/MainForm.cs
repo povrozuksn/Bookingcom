@@ -51,18 +51,32 @@ namespace Bookingcom
             foreach (string city in cityes)
                 CityComboBox.Items.Add(city);
 
-            List<string> hotels = MySelect("SELECT name FROM hotels");
+            List<string> hotels = MySelect("SELECT id, name, adress_pic FROM hotels");
 
             int x = 20;
-            for(int i=0; i<hotels.Count; i++)
+            for(int i=0; i<hotels.Count; i+=3)
             {
                 Label lbl = new Label();
                 lbl.Location = new Point(x, 20);
                 lbl.Size = new Size(220, 30);
                 lbl.Font = new Font("Arial Narrow", 13);
-                lbl.Text = hotels[i];
+                lbl.Text = hotels[i+1];
+                lbl.Tag = hotels[i];
                 lbl.Click += new EventHandler(labelHotel_Click);
                 InfoPanel.Controls.Add(lbl);
+
+                PictureBox pb = new PictureBox();
+                try
+                {
+                    pb.Load("../../Pictures/" + hotels[i+2]);
+                }
+                catch (Exception) { }
+                pb.Location = new Point(x, 60);
+                pb.Size = new Size(270, 184);
+                pb.SizeMode = PictureBoxSizeMode.Zoom;
+                pb.Tag = hotels[i];
+                pb.Click += new EventHandler(Hotel_Click);
+                InfoPanel.Controls.Add(pb);
 
                 x += 320;
             }
@@ -84,15 +98,14 @@ namespace Bookingcom
         private void Hotel_Click(object sender, EventArgs e)
         {
             PictureBox pb = (PictureBox)sender;
-            HotelForm hotelForm = new HotelForm(pb.Tag.ToString(), 5);
+            HotelForm hotelForm = new HotelForm(pb.Tag.ToString());
             hotelForm.ShowDialog();
         }
 
         private void labelHotel_Click(object sender, EventArgs e)
         {
             Label lb = (Label)sender;
-            string[] text = lb.Text.Split(new char[] { '"' });
-            HotelForm hotelForm = new HotelForm(text[1], 5);
+            HotelForm hotelForm = new HotelForm(lb.Tag.ToString());
             hotelForm.ShowDialog();
         }
     }
