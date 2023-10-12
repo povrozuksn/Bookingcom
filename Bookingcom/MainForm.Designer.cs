@@ -217,6 +217,7 @@
             // 
             // InfoPanel
             // 
+            this.InfoPanel.AutoScroll = true;
             this.InfoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InfoPanel.Location = new System.Drawing.Point(0, 198);
             this.InfoPanel.Margin = new System.Windows.Forms.Padding(4);
