@@ -41,7 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.FiltrButton = new System.Windows.Forms.Button();
-            this.HotelComboBox = new System.Windows.Forms.ComboBox();
+            this.RatingComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CityComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -115,7 +115,7 @@
             this.FiltrPanel.Controls.Add(this.label5);
             this.FiltrPanel.Controls.Add(this.dateTimePicker1);
             this.FiltrPanel.Controls.Add(this.FiltrButton);
-            this.FiltrPanel.Controls.Add(this.HotelComboBox);
+            this.FiltrPanel.Controls.Add(this.RatingComboBox);
             this.FiltrPanel.Controls.Add(this.label4);
             this.FiltrPanel.Controls.Add(this.CityComboBox);
             this.FiltrPanel.Controls.Add(this.label3);
@@ -177,26 +177,26 @@
             this.FiltrButton.UseVisualStyleBackColor = true;
             this.FiltrButton.Click += new System.EventHandler(this.FiltrButton_Click);
             // 
-            // HotelComboBox
+            // RatingComboBox
             // 
-            this.HotelComboBox.FormattingEnabled = true;
-            this.HotelComboBox.Items.AddRange(new object[] {
+            this.RatingComboBox.FormattingEnabled = true;
+            this.RatingComboBox.Items.AddRange(new object[] {
             "Венец",
             "Советская",
             "Волга"});
-            this.HotelComboBox.Location = new System.Drawing.Point(128, 96);
-            this.HotelComboBox.Name = "HotelComboBox";
-            this.HotelComboBox.Size = new System.Drawing.Size(185, 32);
-            this.HotelComboBox.TabIndex = 6;
+            this.RatingComboBox.Location = new System.Drawing.Point(128, 96);
+            this.RatingComboBox.Name = "RatingComboBox";
+            this.RatingComboBox.Size = new System.Drawing.Size(185, 32);
+            this.RatingComboBox.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(23, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 24);
+            this.label4.Size = new System.Drawing.Size(71, 24);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Гостиница";
+            this.label4.Text = "Рейтинг";
             // 
             // CityComboBox
             // 
@@ -255,7 +255,7 @@
         private System.Windows.Forms.TextBox LoginTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AuthButton;
-        private System.Windows.Forms.ComboBox HotelComboBox;
+        private System.Windows.Forms.ComboBox RatingComboBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CityComboBox;
         private System.Windows.Forms.Label label3;

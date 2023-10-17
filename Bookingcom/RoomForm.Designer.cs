@@ -33,11 +33,11 @@
             this.RoomLabel = new System.Windows.Forms.Label();
             this.RoomPictureBox = new System.Windows.Forms.PictureBox();
             this.RoomPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.BronButton = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.BronButton = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.InfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomPictureBox)).BeginInit();
             this.RoomPanel.SuspendLayout();
@@ -56,9 +56,11 @@
             // 
             // RoomTextBox
             // 
+            this.RoomTextBox.Enabled = false;
             this.RoomTextBox.Location = new System.Drawing.Point(385, 75);
             this.RoomTextBox.Multiline = true;
             this.RoomTextBox.Name = "RoomTextBox";
+            this.RoomTextBox.ReadOnly = true;
             this.RoomTextBox.Size = new System.Drawing.Size(533, 164);
             this.RoomTextBox.TabIndex = 2;
             // 
@@ -94,22 +96,14 @@
             this.RoomPanel.Size = new System.Drawing.Size(1037, 280);
             this.RoomPanel.TabIndex = 1;
             // 
-            // label1
+            // BronButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(61, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Дата заезда";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(225, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(291, 30);
-            this.dateTimePicker1.TabIndex = 1;
+            this.BronButton.Location = new System.Drawing.Point(539, 57);
+            this.BronButton.Name = "BronButton";
+            this.BronButton.Size = new System.Drawing.Size(212, 82);
+            this.BronButton.TabIndex = 4;
+            this.BronButton.Text = "Забронировать";
+            this.BronButton.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
@@ -128,14 +122,22 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Дата выезда";
             // 
-            // BronButton
+            // dateTimePicker1
             // 
-            this.BronButton.Location = new System.Drawing.Point(539, 57);
-            this.BronButton.Name = "BronButton";
-            this.BronButton.Size = new System.Drawing.Size(212, 82);
-            this.BronButton.TabIndex = 4;
-            this.BronButton.Text = "Забронировать";
-            this.BronButton.UseVisualStyleBackColor = true;
+            this.dateTimePicker1.Location = new System.Drawing.Point(225, 57);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(291, 30);
+            this.dateTimePicker1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(61, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Дата заезда";
             // 
             // RoomForm
             // 

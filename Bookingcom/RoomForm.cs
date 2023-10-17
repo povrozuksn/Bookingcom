@@ -16,13 +16,14 @@ namespace Bookingcom
         {
             InitializeComponent();
 
-            List<string> rooms = MainForm.MySelect("SELECT name, adress_pic, id_hotel FROM rooms WHERE id = " + idRoom);
-            List<string> hotel = MainForm.MySelect("SELECT name FROM hotels WHERE id = " + rooms[2]);
+            List<string> rooms = MainForm.MySelect("SELECT name, adress_pic, specification, id_hotel FROM rooms WHERE id = " + idRoom);
+            List<string> hotel = MainForm.MySelect("SELECT name FROM hotels WHERE id = " + rooms[3]);
 
             Text = hotel[0] + ": " + rooms[0];
             RoomLabel.Text = hotel[0] + ": " + rooms[0];
 
             RoomPictureBox.Load("../../Pictures/" + rooms[1]);
+            RoomTextBox.Text = rooms[2];
 
         }
 
