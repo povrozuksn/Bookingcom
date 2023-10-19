@@ -33,6 +33,8 @@
             this.HotelLabel = new System.Windows.Forms.Label();
             this.HotelPictureBox = new System.Windows.Forms.PictureBox();
             this.InfoPanel = new System.Windows.Forms.Panel();
+            this.AdressLabel = new System.Windows.Forms.Label();
+            this.TelLabel = new System.Windows.Forms.Label();
             this.HotelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HotelPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -40,6 +42,8 @@
             // HotelPanel
             // 
             this.HotelPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.HotelPanel.Controls.Add(this.TelLabel);
+            this.HotelPanel.Controls.Add(this.AdressLabel);
             this.HotelPanel.Controls.Add(this.HotelTextBox);
             this.HotelPanel.Controls.Add(this.HotelLabel);
             this.HotelPanel.Controls.Add(this.HotelPictureBox);
@@ -91,6 +95,24 @@
             this.InfoPanel.Size = new System.Drawing.Size(1163, 321);
             this.InfoPanel.TabIndex = 1;
             // 
+            // AdressLabel
+            // 
+            this.AdressLabel.AutoSize = true;
+            this.AdressLabel.Location = new System.Drawing.Point(788, 66);
+            this.AdressLabel.Name = "AdressLabel";
+            this.AdressLabel.Size = new System.Drawing.Size(52, 24);
+            this.AdressLabel.TabIndex = 4;
+            this.AdressLabel.Text = "label1";
+            // 
+            // TelLabel
+            // 
+            this.TelLabel.AutoSize = true;
+            this.TelLabel.Location = new System.Drawing.Point(788, 90);
+            this.TelLabel.Name = "TelLabel";
+            this.TelLabel.Size = new System.Drawing.Size(52, 24);
+            this.TelLabel.TabIndex = 5;
+            this.TelLabel.Text = "label2";
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
@@ -117,5 +139,7 @@
         private System.Windows.Forms.TextBox HotelTextBox;
         private System.Windows.Forms.Label HotelLabel;
         private System.Windows.Forms.PictureBox HotelPictureBox;
+        private System.Windows.Forms.Label TelLabel;
+        private System.Windows.Forms.Label AdressLabel;
     }
 }

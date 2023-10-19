@@ -28,6 +28,7 @@ namespace Bookingcom
             HotelLabel.Text = hotel[1];
             HotelPictureBox.Load("../../Pictures/" + hotel[4]);
             HotelTextBox.Text = hotel[3];
+
             int ratingHotel = Convert.ToInt32(hotel[2]);
             int x = 415;
             for(int i=0; i< ratingHotel; i++)
@@ -41,6 +42,9 @@ namespace Bookingcom
 
                 x += 55;
             }
+
+            AdressLabel.Text = hotel[6];
+            TelLabel.Text = hotel[7];
             #endregion
 
             #region Номера выбранной гостиницы на панеле InfoPanel

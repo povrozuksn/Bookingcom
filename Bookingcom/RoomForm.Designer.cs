@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SLabel = new System.Windows.Forms.Label();
             this.InfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomPictureBox)).BeginInit();
             this.RoomPanel.SuspendLayout();
@@ -45,6 +47,8 @@
             // 
             // InfoPanel
             // 
+            this.InfoPanel.Controls.Add(this.SLabel);
+            this.InfoPanel.Controls.Add(this.label3);
             this.InfoPanel.Controls.Add(this.RoomTextBox);
             this.InfoPanel.Controls.Add(this.RoomLabel);
             this.InfoPanel.Controls.Add(this.RoomPictureBox);
@@ -61,7 +65,7 @@
             this.RoomTextBox.Multiline = true;
             this.RoomTextBox.Name = "RoomTextBox";
             this.RoomTextBox.ReadOnly = true;
-            this.RoomTextBox.Size = new System.Drawing.Size(533, 164);
+            this.RoomTextBox.Size = new System.Drawing.Size(533, 126);
             this.RoomTextBox.TabIndex = 2;
             // 
             // RoomLabel
@@ -139,6 +143,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Дата заезда";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(380, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Площадь, кв. м:";
+            // 
+            // SLabel
+            // 
+            this.SLabel.AutoSize = true;
+            this.SLabel.Location = new System.Drawing.Point(534, 226);
+            this.SLabel.Name = "SLabel";
+            this.SLabel.Size = new System.Drawing.Size(19, 25);
+            this.SLabel.TabIndex = 4;
+            this.SLabel.Text = "-";
+            // 
             // RoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -171,5 +193,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label SLabel;
+        private System.Windows.Forms.Label label3;
     }
 }
