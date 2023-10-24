@@ -20,8 +20,8 @@ namespace Bookingcom
 
             InitializeComponent();
 
-            List<string> hotel = MainForm.MySelect("SELECT * FROM hotels WHERE id = " + _idHotel);
-            List<string> rooms = MainForm.MySelect("SELECT id, name, adress_pic FROM rooms WHERE id_hotel = " + _idHotel);
+            List<string> hotel = SQLClass.MySelect("SELECT * FROM hotels WHERE id = " + _idHotel);
+            List<string> rooms = SQLClass.MySelect("SELECT id, name, adress_pic FROM rooms WHERE id_hotel = " + _idHotel);
 
             #region Выбранная гостиница на панеле HotelPanel 
             Text = hotel[1];

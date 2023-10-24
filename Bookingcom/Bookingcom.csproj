@@ -69,6 +69,7 @@
     <Compile Include="RoomForm.Designer.cs">
       <DependentUpon>RoomForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLClass.cs" />
     <EmbeddedResource Include="HotelForm.resx">
       <DependentUpon>HotelForm.cs</DependentUpon>
     </EmbeddedResource>

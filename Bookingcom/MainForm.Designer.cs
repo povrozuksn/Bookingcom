@@ -134,6 +134,7 @@
             this.FindButton.TabIndex = 12;
             this.FindButton.Text = "Найти";
             this.FindButton.UseVisualStyleBackColor = true;
+            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
             // 
             // label6
             // 
