@@ -46,6 +46,7 @@
             this.CityComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.InfoPanel = new System.Windows.Forms.Panel();
+            this.HelloLabel = new System.Windows.Forms.Label();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             // AuthPanel
             // 
             this.AuthPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.AuthPanel.Controls.Add(this.HelloLabel);
             this.AuthPanel.Controls.Add(this.PassTextBox);
             this.AuthPanel.Controls.Add(this.label2);
             this.AuthPanel.Controls.Add(this.LoginTextBox);
@@ -105,6 +107,7 @@
             this.AuthButton.TabIndex = 0;
             this.AuthButton.Text = "Войти";
             this.AuthButton.UseVisualStyleBackColor = true;
+            this.AuthButton.Click += new System.EventHandler(this.AuthButton_Click);
             // 
             // FiltrPanel
             // 
@@ -182,9 +185,11 @@
             // 
             this.RatingComboBox.FormattingEnabled = true;
             this.RatingComboBox.Items.AddRange(new object[] {
-            "Венец",
-            "Советская",
-            "Волга"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
             this.RatingComboBox.Location = new System.Drawing.Point(128, 96);
             this.RatingComboBox.Name = "RatingComboBox";
             this.RatingComboBox.Size = new System.Drawing.Size(185, 32);
@@ -226,6 +231,15 @@
             this.InfoPanel.Size = new System.Drawing.Size(1313, 311);
             this.InfoPanel.TabIndex = 2;
             // 
+            // HelloLabel
+            // 
+            this.HelloLabel.AutoSize = true;
+            this.HelloLabel.Location = new System.Drawing.Point(12, 17);
+            this.HelloLabel.Name = "HelloLabel";
+            this.HelloLabel.Size = new System.Drawing.Size(0, 24);
+            this.HelloLabel.TabIndex = 5;
+            this.HelloLabel.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
@@ -266,6 +280,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button FiltrButton;
+        private System.Windows.Forms.Label HelloLabel;
     }
 }
 

@@ -15,6 +15,8 @@ namespace Bookingcom
 {
     public partial class MainForm : Form
     {      
+        public static string Login = "";
+        public static string NameFamily = "";
 
         public MainForm()
         {
@@ -67,6 +69,11 @@ namespace Bookingcom
                 command += " AND name_city = '" + CityComboBox.Text + "'";
             }
 
+            if (RatingComboBox.Text != "")
+            {
+                command += " AND rating = '" + RatingComboBox.Text + "'";
+            }
+
             List<string> hotels = SQLClass.MySelect(command);
             
             InfoPanel.Controls.Clear();
@@ -98,6 +105,49 @@ namespace Bookingcom
                 x += 320;
             }
 
+        }
+
+        private void AuthButton_Click(object sender, EventArgs e)
+        {
+            List<string> user_date = SQLClass.MySelect("SELECT login, name, family FROM users WHERE login = '" + LoginTextBox.Text + "' AND pass = '" + PassTextBox.Text + "'");
+
+            if(AuthButton.Text == "Выйти")
+            {
+                Login = "";
+                AuthPanel.Controls.Clear();
+                AuthPanel.Controls.Add(label1);
+                LoginTextBox.Text = "";
+                AuthPanel.Controls.Add(LoginTextBox);
+                AuthPanel.Controls.Add(label2);
+                PassTextBox.Text = "";
+                AuthPanel.Controls.Add(PassTextBox);
+                AuthButton.Text = "Войти";
+                AuthPanel.Controls.Add(AuthButton);
+                HelloLabel.Visible = false;
+                HelloLabel.Text = "";
+
+            }
+            else
+            {
+                if(user_date.Count>0)
+                {
+                    Login = user_date[0];
+                    NameFamily = user_date[1] + " " + user_date[2];
+                    AuthPanel.Controls.Clear();
+                    AuthButton.Text = "Выйти";
+                    AuthPanel.Controls.Add(AuthButton);
+                    AuthPanel.Controls.Add(HelloLabel);
+                    HelloLabel.Visible = true;
+                    HelloLabel.Text = "Приветствуем Вас, " + NameFamily;
+                }
+                else
+                {
+                    MessageBox.Show("Вы указали неверный логин/пароль");
+                    LoginTextBox.Text = "";
+                    PassTextBox.Text = "";
+                }
+                
+            }
         }
     }
 }
