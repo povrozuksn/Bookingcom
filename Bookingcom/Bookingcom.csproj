@@ -49,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminCityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCityForm.Designer.cs">
+      <DependentUpon>AdminCityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHotelsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHotelsForm.Designer.cs">
+      <DependentUpon>AdminHotelsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HotelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +88,15 @@
       <DependentUpon>RoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLClass.cs" />
+    <EmbeddedResource Include="AdminCityForm.resx">
+      <DependentUpon>AdminCityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHotelsForm.resx">
+      <DependentUpon>AdminHotelsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HotelForm.resx">
       <DependentUpon>HotelForm.cs</DependentUpon>
     </EmbeddedResource>

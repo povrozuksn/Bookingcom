@@ -17,12 +17,14 @@ namespace Bookingcom
     {      
         public static string Login = "";
         public static string NameFamily = "";
+        public static int isAdmin;
 
         public MainForm()
         {
             InitializeComponent();
 
             FindButton_Click(null,null);
+            AdminFormButton.Visible = false;
         }
 
         private void FiltrButton_Click(object sender, EventArgs e)
@@ -109,7 +111,7 @@ namespace Bookingcom
 
         private void AuthButton_Click(object sender, EventArgs e)
         {
-            List<string> user_date = SQLClass.MySelect("SELECT login, name, family FROM users WHERE login = '" + LoginTextBox.Text + "' AND pass = '" + PassTextBox.Text + "'");
+            List<string> user_date = SQLClass.MySelect("SELECT login, name, family, admin FROM users WHERE login = '" + LoginTextBox.Text + "' AND pass = '" + PassTextBox.Text + "'");
 
             if(AuthButton.Text == "Выйти")
             {
@@ -125,12 +127,14 @@ namespace Bookingcom
                 AuthPanel.Controls.Add(AuthButton);
                 HelloLabel.Visible = false;
                 HelloLabel.Text = "";
+                isAdmin = 0;
 
             }
             else
             {
                 if(user_date.Count>0)
                 {
+                    isAdmin = Convert.ToInt32(user_date[3]);
                     Login = user_date[0];
                     NameFamily = user_date[1] + " " + user_date[2];
                     AuthPanel.Controls.Clear();
@@ -139,6 +143,8 @@ namespace Bookingcom
                     AuthPanel.Controls.Add(HelloLabel);
                     HelloLabel.Visible = true;
                     HelloLabel.Text = "Приветствуем Вас, " + NameFamily;
+                    AdminFormButton.Visible = Convert.ToBoolean(isAdmin);
+                    AuthPanel.Controls.Add(AdminFormButton);
                 }
                 else
                 {
@@ -148,6 +154,12 @@ namespace Bookingcom
                 }
                 
             }
+        }
+
+        private void AdminFormButton_Click(object sender, EventArgs e)
+        {
+            AdminForm af = new AdminForm();
+            af.ShowDialog();
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.AuthPanel = new System.Windows.Forms.Panel();
+            this.HelloLabel = new System.Windows.Forms.Label();
             this.PassTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LoginTextBox = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@
             this.CityComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.InfoPanel = new System.Windows.Forms.Panel();
-            this.HelloLabel = new System.Windows.Forms.Label();
+            this.AdminFormButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             // AuthPanel
             // 
             this.AuthPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.AuthPanel.Controls.Add(this.AdminFormButton);
             this.AuthPanel.Controls.Add(this.HelloLabel);
             this.AuthPanel.Controls.Add(this.PassTextBox);
             this.AuthPanel.Controls.Add(this.label2);
@@ -66,6 +68,15 @@
             this.AuthPanel.Name = "AuthPanel";
             this.AuthPanel.Size = new System.Drawing.Size(1313, 58);
             this.AuthPanel.TabIndex = 0;
+            // 
+            // HelloLabel
+            // 
+            this.HelloLabel.AutoSize = true;
+            this.HelloLabel.Location = new System.Drawing.Point(12, 17);
+            this.HelloLabel.Name = "HelloLabel";
+            this.HelloLabel.Size = new System.Drawing.Size(0, 24);
+            this.HelloLabel.TabIndex = 5;
+            this.HelloLabel.Visible = false;
             // 
             // PassTextBox
             // 
@@ -231,14 +242,15 @@
             this.InfoPanel.Size = new System.Drawing.Size(1313, 311);
             this.InfoPanel.TabIndex = 2;
             // 
-            // HelloLabel
+            // AdminFormButton
             // 
-            this.HelloLabel.AutoSize = true;
-            this.HelloLabel.Location = new System.Drawing.Point(12, 17);
-            this.HelloLabel.Name = "HelloLabel";
-            this.HelloLabel.Size = new System.Drawing.Size(0, 24);
-            this.HelloLabel.TabIndex = 5;
-            this.HelloLabel.Visible = false;
+            this.AdminFormButton.Location = new System.Drawing.Point(765, 12);
+            this.AdminFormButton.Name = "AdminFormButton";
+            this.AdminFormButton.Size = new System.Drawing.Size(238, 33);
+            this.AdminFormButton.TabIndex = 6;
+            this.AdminFormButton.Text = "Панель администратора";
+            this.AdminFormButton.UseVisualStyleBackColor = true;
+            this.AdminFormButton.Click += new System.EventHandler(this.AdminFormButton_Click);
             // 
             // MainForm
             // 
@@ -281,6 +293,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button FiltrButton;
         private System.Windows.Forms.Label HelloLabel;
+        private System.Windows.Forms.Button AdminFormButton;
     }
 }
 

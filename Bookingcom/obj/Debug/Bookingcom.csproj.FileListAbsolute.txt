@@ -13,3 +13,6 @@ C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.HotelForm.
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.RoomForm.resources
 C:\Users\root\source\repos\Bookingcom\Bookingcom\bin\Debug\MySql.Data.dll
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.csproj.CopyComplete
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminForm.resources
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminCityForm.resources
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminHotelsForm.resources
