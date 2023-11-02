@@ -45,6 +45,7 @@
             // 
             // InfoCityPanel
             // 
+            this.InfoCityPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.InfoCityPanel.Controls.Add(this.label1);
             this.InfoCityPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.InfoCityPanel.Location = new System.Drawing.Point(0, 0);
@@ -54,6 +55,7 @@
             // 
             // AddCityPanel
             // 
+            this.AddCityPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.AddCityPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.AddCityPanel.Location = new System.Drawing.Point(354, 0);
             this.AddCityPanel.Name = "AddCityPanel";

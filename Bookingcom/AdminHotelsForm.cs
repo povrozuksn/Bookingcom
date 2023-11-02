@@ -29,7 +29,7 @@ namespace Bookingcom
 
                 Label lbl1 = new Label();
                 lbl1.Location = new Point(250, y);
-                lbl1.Size = new Size(220, 30);
+                lbl1.Size = new Size(120, 30);
                 lbl1.Font = new Font("Arial Narrow", 13);
                 lbl1.Text = hotels[i+1];
                 InfoHotelsPanel.Controls.Add(lbl1);

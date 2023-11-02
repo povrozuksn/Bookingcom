@@ -66,6 +66,7 @@
             this.AdminRoomsButton.TabIndex = 2;
             this.AdminRoomsButton.Text = "Номера";
             this.AdminRoomsButton.UseVisualStyleBackColor = true;
+            this.AdminRoomsButton.Click += new System.EventHandler(this.AdminRoomsButton_Click);
             // 
             // AdminUsersButton
             // 
@@ -76,6 +77,7 @@
             this.AdminUsersButton.TabIndex = 3;
             this.AdminUsersButton.Text = "Пользователи";
             this.AdminUsersButton.UseVisualStyleBackColor = true;
+            this.AdminUsersButton.Click += new System.EventHandler(this.AdminUsersButton_Click);
             // 
             // label1
             // 
@@ -90,6 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(506, 513);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AdminUsersButton);
@@ -97,6 +100,7 @@
             this.Controls.Add(this.AdminHotelsButton);
             this.Controls.Add(this.AdminCityButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminForm";
             this.Text = "Панель администратора";

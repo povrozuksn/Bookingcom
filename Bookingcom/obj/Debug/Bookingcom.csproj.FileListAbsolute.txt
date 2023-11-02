@@ -16,3 +16,5 @@ C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.csproj.Cop
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminForm.resources
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminCityForm.resources
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminHotelsForm.resources
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminRoomsForm.resources
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminUsersForm.resources

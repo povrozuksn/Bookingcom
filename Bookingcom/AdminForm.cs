@@ -28,5 +28,17 @@ namespace Bookingcom
             AdminHotelsForm ahf = new AdminHotelsForm();
             ahf.ShowDialog();
         }
+
+        private void AdminRoomsButton_Click(object sender, EventArgs e)
+        {
+            AdminRoomsForm arf = new AdminRoomsForm();
+            arf.ShowDialog();
+        }
+
+        private void AdminUsersButton_Click(object sender, EventArgs e)
+        {
+            AdminUsersForm auf = new AdminUsersForm();
+            auf.ShowDialog();
+        }
     }
 }

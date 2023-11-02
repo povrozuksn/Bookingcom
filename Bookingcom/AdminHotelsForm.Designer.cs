@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.InfoHotelsPanel = new System.Windows.Forms.Panel();
-            this.AddHotelsPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AddHotelsPanel = new System.Windows.Forms.Panel();
             this.InfoHotelsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // InfoHotelsPanel
             // 
+            this.InfoHotelsPanel.AutoScroll = true;
+            this.InfoHotelsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.InfoHotelsPanel.Controls.Add(this.label3);
             this.InfoHotelsPanel.Controls.Add(this.label2);
             this.InfoHotelsPanel.Controls.Add(this.label1);
@@ -47,22 +49,14 @@
             this.InfoHotelsPanel.Size = new System.Drawing.Size(962, 312);
             this.InfoHotelsPanel.TabIndex = 0;
             // 
-            // AddHotelsPanel
+            // label3
             // 
-            this.AddHotelsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddHotelsPanel.Location = new System.Drawing.Point(0, 312);
-            this.AddHotelsPanel.Name = "AddHotelsPanel";
-            this.AddHotelsPanel.Size = new System.Drawing.Size(962, 304);
-            this.AddHotelsPanel.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Название";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(450, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Рейтинг";
             // 
             // label2
             // 
@@ -73,14 +67,23 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Город";
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(450, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Рейтинг";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Название";
+            // 
+            // AddHotelsPanel
+            // 
+            this.AddHotelsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.AddHotelsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddHotelsPanel.Location = new System.Drawing.Point(0, 312);
+            this.AddHotelsPanel.Name = "AddHotelsPanel";
+            this.AddHotelsPanel.Size = new System.Drawing.Size(962, 304);
+            this.AddHotelsPanel.TabIndex = 1;
             // 
             // AdminHotelsForm
             // 
