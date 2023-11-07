@@ -14,7 +14,21 @@ namespace Bookingcom
     {
         public AdminCityForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void AddCityButton_Click(object sender, EventArgs e)
+        {
+            SQLClass.MyUpDate("INSERT INTO cityes (name) VALUES ('" + CityTextBox.Text + "')");
+            MessageBox.Show("Сохранено");
+            CityTextBox.Text = "";
+            AdminCityForm_Load(sender, e);
+        }
+
+        private void AdminCityForm_Load(object sender, EventArgs e)
+        {
+            InfoCityPanel.Controls.Clear();
+            InfoCityPanel.Controls.Add(label1);
             List<string> cityes = SQLClass.MySelect("SELECT DISTINCT name FROM cityes ORDER BY name");
             int y = 50;
             foreach (string city in cityes)

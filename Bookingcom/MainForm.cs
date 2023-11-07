@@ -125,6 +125,7 @@ namespace Bookingcom
                 AuthPanel.Controls.Add(PassTextBox);
                 AuthButton.Text = "Войти";
                 AuthPanel.Controls.Add(AuthButton);
+                AuthPanel.Controls.Add(RegButton);
                 HelloLabel.Visible = false;
                 HelloLabel.Text = "";
                 isAdmin = 0;
@@ -148,9 +149,14 @@ namespace Bookingcom
                 }
                 else
                 {
-                    MessageBox.Show("Вы указали неверный логин/пароль");
+                    var result = MessageBox.Show("Вы указали неверный логин/пароль", "Зарегистрироваться", MessageBoxButtons.YesNo);
                     LoginTextBox.Text = "";
                     PassTextBox.Text = "";
+                    if (result == DialogResult.Yes)
+                    {
+                        RegForm reg = new RegForm();
+                        reg.ShowDialog();
+                    }
                 }
                 
             }
@@ -160,6 +166,12 @@ namespace Bookingcom
         {
             AdminForm af = new AdminForm();
             af.ShowDialog();
+        }
+
+        private void RegButton_Click(object sender, EventArgs e)
+        {
+            RegForm reg = new RegForm();
+            reg.ShowDialog();
         }
     }
 }

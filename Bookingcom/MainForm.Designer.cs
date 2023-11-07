@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.AuthPanel = new System.Windows.Forms.Panel();
+            this.AdminFormButton = new System.Windows.Forms.Button();
             this.HelloLabel = new System.Windows.Forms.Label();
             this.PassTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@
             this.CityComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.InfoPanel = new System.Windows.Forms.Panel();
-            this.AdminFormButton = new System.Windows.Forms.Button();
+            this.RegButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             // AuthPanel
             // 
             this.AuthPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.AuthPanel.Controls.Add(this.RegButton);
             this.AuthPanel.Controls.Add(this.AdminFormButton);
             this.AuthPanel.Controls.Add(this.HelloLabel);
             this.AuthPanel.Controls.Add(this.PassTextBox);
@@ -68,6 +70,16 @@
             this.AuthPanel.Name = "AuthPanel";
             this.AuthPanel.Size = new System.Drawing.Size(1313, 58);
             this.AuthPanel.TabIndex = 0;
+            // 
+            // AdminFormButton
+            // 
+            this.AdminFormButton.Location = new System.Drawing.Point(765, 12);
+            this.AdminFormButton.Name = "AdminFormButton";
+            this.AdminFormButton.Size = new System.Drawing.Size(238, 33);
+            this.AdminFormButton.TabIndex = 6;
+            this.AdminFormButton.Text = "Панель администратора";
+            this.AdminFormButton.UseVisualStyleBackColor = true;
+            this.AdminFormButton.Click += new System.EventHandler(this.AdminFormButton_Click);
             // 
             // HelloLabel
             // 
@@ -242,15 +254,15 @@
             this.InfoPanel.Size = new System.Drawing.Size(1313, 311);
             this.InfoPanel.TabIndex = 2;
             // 
-            // AdminFormButton
+            // RegButton
             // 
-            this.AdminFormButton.Location = new System.Drawing.Point(765, 12);
-            this.AdminFormButton.Name = "AdminFormButton";
-            this.AdminFormButton.Size = new System.Drawing.Size(238, 33);
-            this.AdminFormButton.TabIndex = 6;
-            this.AdminFormButton.Text = "Панель администратора";
-            this.AdminFormButton.UseVisualStyleBackColor = true;
-            this.AdminFormButton.Click += new System.EventHandler(this.AdminFormButton_Click);
+            this.RegButton.Location = new System.Drawing.Point(1179, 11);
+            this.RegButton.Name = "RegButton";
+            this.RegButton.Size = new System.Drawing.Size(122, 33);
+            this.RegButton.TabIndex = 7;
+            this.RegButton.Text = "Регистрация";
+            this.RegButton.UseVisualStyleBackColor = true;
+            this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
             // 
             // MainForm
             // 
@@ -294,6 +306,7 @@
         private System.Windows.Forms.Button FiltrButton;
         private System.Windows.Forms.Label HelloLabel;
         private System.Windows.Forms.Button AdminFormButton;
+        private System.Windows.Forms.Button RegButton;
     }
 }
 
