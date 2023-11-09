@@ -55,7 +55,7 @@
             this.InfoCityPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.InfoCityPanel.Location = new System.Drawing.Point(0, 0);
             this.InfoCityPanel.Name = "InfoCityPanel";
-            this.InfoCityPanel.Size = new System.Drawing.Size(348, 489);
+            this.InfoCityPanel.Size = new System.Drawing.Size(542, 489);
             this.InfoCityPanel.TabIndex = 1;
             // 
             // AddCityPanel
@@ -64,10 +64,10 @@
             this.AddCityPanel.Controls.Add(this.AddCityButton);
             this.AddCityPanel.Controls.Add(this.label2);
             this.AddCityPanel.Controls.Add(this.CityTextBox);
-            this.AddCityPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.AddCityPanel.Location = new System.Drawing.Point(354, 0);
+            this.AddCityPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddCityPanel.Location = new System.Drawing.Point(542, 0);
             this.AddCityPanel.Name = "AddCityPanel";
-            this.AddCityPanel.Size = new System.Drawing.Size(553, 489);
+            this.AddCityPanel.Size = new System.Drawing.Size(365, 489);
             this.AddCityPanel.TabIndex = 2;
             // 
             // AddCityButton
@@ -75,7 +75,7 @@
             this.AddCityButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AddCityButton.Location = new System.Drawing.Point(0, 438);
             this.AddCityButton.Name = "AddCityButton";
-            this.AddCityButton.Size = new System.Drawing.Size(553, 51);
+            this.AddCityButton.Size = new System.Drawing.Size(365, 51);
             this.AddCityButton.TabIndex = 2;
             this.AddCityButton.Text = "Добавить";
             this.AddCityButton.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             // 
             this.CityTextBox.Location = new System.Drawing.Point(38, 74);
             this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.Size = new System.Drawing.Size(461, 30);
+            this.CityTextBox.Size = new System.Drawing.Size(296, 30);
             this.CityTextBox.TabIndex = 0;
             // 
             // AdminCityForm
