@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace Bookingcom
             {
                 adress = openFileDialog1.FileName;
                 HotelPictureBox.Load(adress);
+                adress = Path.GetFileName(adress);
             }
         }
 
@@ -34,12 +36,15 @@ namespace Bookingcom
                 SQLClass.MyUpDate("INSERT INTO hotels (name, rating, adress_pic, name_city) VALUES ('" + NameHotelTextBox.Text + "','" + RatingComboBox.Text + "', '" + adress + "', '" + CityComboBox.Text + "')");
                 MessageBox.Show("Сохранено");
                 AdminHotelsForm_Load(sender, e);
+                NameHotelTextBox.Text = "";
+                RatingComboBox.Text = "";
+                CityComboBox.Text = "";
+                HotelPictureBox.Image = null;
             }
             else
             {
                 MessageBox.Show("Заполните обязательные поля");
-            }
-            
+            }            
         }
 
         private void AdminHotelsForm_Load(object sender, EventArgs e)
