@@ -33,20 +33,21 @@ namespace Bookingcom
                 HotelsComboBox.Items.Add(hotels[i] + ". " + hotels[i+1]);
             }
 
-            List<string> rooms = SQLClass.MySelect("SELECT name, id_hotel FROM rooms");
+            List<string> rooms = SQLClass.MySelect("SELECT id, name, id_hotel FROM rooms");
             int y = 50;
-            for (int i = 0; i < rooms.Count; i += 2)
+            for (int i = 0; i < rooms.Count; i += 3)
             {
                 Label lbl = new Label();
                 lbl.Location = new Point(20, y);
                 lbl.Size = new Size(220, 30);
                 lbl.Font = new Font("Arial Narrow", 13);
-                lbl.Text = rooms[i];
+                lbl.Tag = rooms[i];
+                lbl.Text = rooms[i+1];
                 InfoRoomsPanel.Controls.Add(lbl);
 
                 List<string> hotel = new List<string>();
                 hotel.Clear();
-                hotel = SQLClass.MySelect("SELECT name FROM hotels WHERE id = " + rooms[i + 1]);
+                hotel = SQLClass.MySelect("SELECT name FROM hotels WHERE id = " + rooms[i + 2]);
 
                 Label lbl1 = new Label();
                 lbl1.Location = new Point(475, y);
@@ -54,6 +55,14 @@ namespace Bookingcom
                 lbl1.Font = new Font("Arial Narrow", 13);
                 lbl1.Text = hotel[0];
                 InfoRoomsPanel.Controls.Add(lbl1);
+
+                Button btn = new Button();
+                btn.Location = new Point(800, y);
+                btn.Size = new Size(100, 30);
+                btn.Font = new Font("Arial Narrow", 12);
+                btn.Click += new EventHandler(DeleteRoomClick);
+                btn.Text = "Удалить";
+                InfoRoomsPanel.Controls.Add(btn);
 
                 y += 35;
             }
@@ -88,6 +97,22 @@ namespace Bookingcom
             else
             {
                 MessageBox.Show("Заполните обязательные поля");
+            }
+        }
+
+        private void DeleteRoomClick(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int y = btn.Location.Y;
+
+            foreach (Control control in InfoRoomsPanel.Controls)
+            {
+                if (control.Location == new Point(20, y))
+                {
+                    SQLClass.MyUpDate("DELETE FROM rooms WHERE id = '" + control.Tag + "'");
+                    MessageBox.Show("Удаление успешно");
+                    AdminRoomsForm_Load(sender, e);
+                }
             }
         }
     }

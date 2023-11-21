@@ -110,6 +110,7 @@ namespace Bookingcom
                 if (control.Location == new Point(20, y))
                 {
                     SQLClass.MyUpDate("DELETE FROM hotels WHERE id = '" + control.Tag + "'");
+                    SQLClass.MyUpDate("DELETE FROM rooms WHERE id_hotel = '" + control.Tag + "'");
                     MessageBox.Show("Удаление успешно");
                     AdminHotelsForm_Load(sender, e);
                 }
