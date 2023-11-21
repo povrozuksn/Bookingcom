@@ -20,12 +20,16 @@ namespace Bookingcom
 
             InitializeComponent();
 
+            HotelTextBox.ReadOnly = !Convert.ToBoolean(MainForm.isAdmin);
+            HotelTextBox.Enabled = Convert.ToBoolean(MainForm.isAdmin);
+            AddDescButton.Visible = Convert.ToBoolean(MainForm.isAdmin);
+
             List<string> hotel = SQLClass.MySelect("SELECT * FROM hotels WHERE id = " + _idHotel);
             List<string> rooms = SQLClass.MySelect("SELECT id, name, adress_pic FROM rooms WHERE id_hotel = " + _idHotel);
 
             #region Выбранная гостиница на панеле HotelPanel 
-            Text = hotel[1];
-            HotelLabel.Text = hotel[1];
+            Text = hotel[1] + " : " + hotel[6];
+            HotelLabel.Text = hotel[1] + " : " + hotel[6];
             HotelPictureBox.Load("../../Pictures/" + hotel[4]);
             HotelTextBox.Text = hotel[3];
 
@@ -43,8 +47,8 @@ namespace Bookingcom
                 x += 55;
             }
 
-            AdressLabel.Text = hotel[6];
-            TelLabel.Text = hotel[7];
+            AdressLabel.Text = hotel[7];
+            TelLabel.Text = hotel[8];
             #endregion
 
             #region Номера выбранной гостиницы на панеле InfoPanel
@@ -96,6 +100,12 @@ namespace Bookingcom
             Label lb = (Label)sender;
             RoomForm rf = new RoomForm(lb.Tag.ToString());
             rf.ShowDialog();
+        }
+
+        private void AddDescButton_Click(object sender, EventArgs e)
+        {
+            SQLClass.MyUpDate("UPDATE hotels SET desc = '" + HotelTextBox.Text + "' WHERE id = " + _idHotel);
+            MessageBox.Show("Сохранено");
         }
     }
 }

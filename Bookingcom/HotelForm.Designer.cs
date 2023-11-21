@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.HotelPanel = new System.Windows.Forms.Panel();
+            this.TelLabel = new System.Windows.Forms.Label();
+            this.AdressLabel = new System.Windows.Forms.Label();
             this.HotelTextBox = new System.Windows.Forms.TextBox();
             this.HotelLabel = new System.Windows.Forms.Label();
             this.HotelPictureBox = new System.Windows.Forms.PictureBox();
             this.InfoPanel = new System.Windows.Forms.Panel();
-            this.AdressLabel = new System.Windows.Forms.Label();
-            this.TelLabel = new System.Windows.Forms.Label();
+            this.AddDescButton = new System.Windows.Forms.Button();
             this.HotelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HotelPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -42,6 +43,7 @@
             // HotelPanel
             // 
             this.HotelPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.HotelPanel.Controls.Add(this.AddDescButton);
             this.HotelPanel.Controls.Add(this.TelLabel);
             this.HotelPanel.Controls.Add(this.AdressLabel);
             this.HotelPanel.Controls.Add(this.HotelTextBox);
@@ -53,6 +55,24 @@
             this.HotelPanel.Name = "HotelPanel";
             this.HotelPanel.Size = new System.Drawing.Size(1163, 288);
             this.HotelPanel.TabIndex = 0;
+            // 
+            // TelLabel
+            // 
+            this.TelLabel.AutoSize = true;
+            this.TelLabel.Location = new System.Drawing.Point(788, 90);
+            this.TelLabel.Name = "TelLabel";
+            this.TelLabel.Size = new System.Drawing.Size(52, 24);
+            this.TelLabel.TabIndex = 5;
+            this.TelLabel.Text = "label2";
+            // 
+            // AdressLabel
+            // 
+            this.AdressLabel.AutoSize = true;
+            this.AdressLabel.Location = new System.Drawing.Point(788, 66);
+            this.AdressLabel.Name = "AdressLabel";
+            this.AdressLabel.Size = new System.Drawing.Size(52, 24);
+            this.AdressLabel.TabIndex = 4;
+            this.AdressLabel.Text = "label1";
             // 
             // HotelTextBox
             // 
@@ -95,23 +115,15 @@
             this.InfoPanel.Size = new System.Drawing.Size(1163, 321);
             this.InfoPanel.TabIndex = 1;
             // 
-            // AdressLabel
+            // AddDescButton
             // 
-            this.AdressLabel.AutoSize = true;
-            this.AdressLabel.Location = new System.Drawing.Point(788, 66);
-            this.AdressLabel.Name = "AdressLabel";
-            this.AdressLabel.Size = new System.Drawing.Size(52, 24);
-            this.AdressLabel.TabIndex = 4;
-            this.AdressLabel.Text = "label1";
-            // 
-            // TelLabel
-            // 
-            this.TelLabel.AutoSize = true;
-            this.TelLabel.Location = new System.Drawing.Point(788, 90);
-            this.TelLabel.Name = "TelLabel";
-            this.TelLabel.Size = new System.Drawing.Size(52, 24);
-            this.TelLabel.TabIndex = 5;
-            this.TelLabel.Text = "label2";
+            this.AddDescButton.Location = new System.Drawing.Point(1040, 230);
+            this.AddDescButton.Name = "AddDescButton";
+            this.AddDescButton.Size = new System.Drawing.Size(105, 34);
+            this.AddDescButton.TabIndex = 6;
+            this.AddDescButton.Text = "Сохранить";
+            this.AddDescButton.UseVisualStyleBackColor = true;
+            this.AddDescButton.Click += new System.EventHandler(this.AddDescButton_Click);
             // 
             // HotelForm
             // 
@@ -141,5 +153,6 @@
         private System.Windows.Forms.PictureBox HotelPictureBox;
         private System.Windows.Forms.Label TelLabel;
         private System.Windows.Forms.Label AdressLabel;
+        private System.Windows.Forms.Button AddDescButton;
     }
 }
