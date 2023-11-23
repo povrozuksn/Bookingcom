@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.HotelPanel = new System.Windows.Forms.Panel();
-            this.TelLabel = new System.Windows.Forms.Label();
-            this.AdressLabel = new System.Windows.Forms.Label();
+            this.AddDescButton = new System.Windows.Forms.Button();
             this.HotelTextBox = new System.Windows.Forms.TextBox();
             this.HotelLabel = new System.Windows.Forms.Label();
             this.HotelPictureBox = new System.Windows.Forms.PictureBox();
             this.InfoPanel = new System.Windows.Forms.Panel();
-            this.AddDescButton = new System.Windows.Forms.Button();
+            this.AdressTextBox = new System.Windows.Forms.TextBox();
+            this.TelTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.HotelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HotelPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -43,9 +45,11 @@
             // HotelPanel
             // 
             this.HotelPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.HotelPanel.Controls.Add(this.label2);
+            this.HotelPanel.Controls.Add(this.label1);
+            this.HotelPanel.Controls.Add(this.TelTextBox);
+            this.HotelPanel.Controls.Add(this.AdressTextBox);
             this.HotelPanel.Controls.Add(this.AddDescButton);
-            this.HotelPanel.Controls.Add(this.TelLabel);
-            this.HotelPanel.Controls.Add(this.AdressLabel);
             this.HotelPanel.Controls.Add(this.HotelTextBox);
             this.HotelPanel.Controls.Add(this.HotelLabel);
             this.HotelPanel.Controls.Add(this.HotelPictureBox);
@@ -56,23 +60,15 @@
             this.HotelPanel.Size = new System.Drawing.Size(1163, 288);
             this.HotelPanel.TabIndex = 0;
             // 
-            // TelLabel
+            // AddDescButton
             // 
-            this.TelLabel.AutoSize = true;
-            this.TelLabel.Location = new System.Drawing.Point(788, 90);
-            this.TelLabel.Name = "TelLabel";
-            this.TelLabel.Size = new System.Drawing.Size(52, 24);
-            this.TelLabel.TabIndex = 5;
-            this.TelLabel.Text = "label2";
-            // 
-            // AdressLabel
-            // 
-            this.AdressLabel.AutoSize = true;
-            this.AdressLabel.Location = new System.Drawing.Point(788, 66);
-            this.AdressLabel.Name = "AdressLabel";
-            this.AdressLabel.Size = new System.Drawing.Size(52, 24);
-            this.AdressLabel.TabIndex = 4;
-            this.AdressLabel.Text = "label1";
+            this.AddDescButton.Location = new System.Drawing.Point(1040, 230);
+            this.AddDescButton.Name = "AddDescButton";
+            this.AddDescButton.Size = new System.Drawing.Size(105, 34);
+            this.AddDescButton.TabIndex = 6;
+            this.AddDescButton.Text = "Сохранить";
+            this.AddDescButton.UseVisualStyleBackColor = true;
+            this.AddDescButton.Click += new System.EventHandler(this.AddDescButton_Click);
             // 
             // HotelTextBox
             // 
@@ -115,15 +111,41 @@
             this.InfoPanel.Size = new System.Drawing.Size(1163, 321);
             this.InfoPanel.TabIndex = 1;
             // 
-            // AddDescButton
+            // AdressTextBox
             // 
-            this.AddDescButton.Location = new System.Drawing.Point(1040, 230);
-            this.AddDescButton.Name = "AddDescButton";
-            this.AddDescButton.Size = new System.Drawing.Size(105, 34);
-            this.AddDescButton.TabIndex = 6;
-            this.AddDescButton.Text = "Сохранить";
-            this.AddDescButton.UseVisualStyleBackColor = true;
-            this.AddDescButton.Click += new System.EventHandler(this.AddDescButton_Click);
+            this.AdressTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AdressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AdressTextBox.Location = new System.Drawing.Point(739, 67);
+            this.AdressTextBox.Name = "AdressTextBox";
+            this.AdressTextBox.Size = new System.Drawing.Size(295, 23);
+            this.AdressTextBox.TabIndex = 7;
+            // 
+            // TelTextBox
+            // 
+            this.TelTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.TelTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TelTextBox.Location = new System.Drawing.Point(739, 95);
+            this.TelTextBox.Name = "TelTextBox";
+            this.TelTextBox.Size = new System.Drawing.Size(295, 23);
+            this.TelTextBox.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(676, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 24);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Адрес";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(694, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 24);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Тел";
             // 
             // HotelForm
             // 
@@ -151,8 +173,10 @@
         private System.Windows.Forms.TextBox HotelTextBox;
         private System.Windows.Forms.Label HotelLabel;
         private System.Windows.Forms.PictureBox HotelPictureBox;
-        private System.Windows.Forms.Label TelLabel;
-        private System.Windows.Forms.Label AdressLabel;
         private System.Windows.Forms.Button AddDescButton;
+        private System.Windows.Forms.TextBox AdressTextBox;
+        private System.Windows.Forms.TextBox TelTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

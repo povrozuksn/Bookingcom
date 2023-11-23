@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.AuthPanel = new System.Windows.Forms.Panel();
+            this.RegButton = new System.Windows.Forms.Button();
             this.AdminFormButton = new System.Windows.Forms.Button();
             this.HelloLabel = new System.Windows.Forms.Label();
             this.PassTextBox = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@
             this.CityComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.InfoPanel = new System.Windows.Forms.Panel();
-            this.RegButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,16 @@
             this.AuthPanel.Name = "AuthPanel";
             this.AuthPanel.Size = new System.Drawing.Size(1313, 58);
             this.AuthPanel.TabIndex = 0;
+            // 
+            // RegButton
+            // 
+            this.RegButton.Location = new System.Drawing.Point(1179, 11);
+            this.RegButton.Name = "RegButton";
+            this.RegButton.Size = new System.Drawing.Size(122, 33);
+            this.RegButton.TabIndex = 7;
+            this.RegButton.Text = "Регистрация";
+            this.RegButton.UseVisualStyleBackColor = true;
+            this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
             // 
             // AdminFormButton
             // 
@@ -94,6 +104,7 @@
             // 
             this.PassTextBox.Location = new System.Drawing.Point(387, 14);
             this.PassTextBox.Name = "PassTextBox";
+            this.PassTextBox.PasswordChar = '*';
             this.PassTextBox.Size = new System.Drawing.Size(189, 30);
             this.PassTextBox.TabIndex = 4;
             // 
@@ -253,16 +264,6 @@
             this.InfoPanel.Name = "InfoPanel";
             this.InfoPanel.Size = new System.Drawing.Size(1313, 311);
             this.InfoPanel.TabIndex = 2;
-            // 
-            // RegButton
-            // 
-            this.RegButton.Location = new System.Drawing.Point(1179, 11);
-            this.RegButton.Name = "RegButton";
-            this.RegButton.Size = new System.Drawing.Size(122, 33);
-            this.RegButton.TabIndex = 7;
-            this.RegButton.Text = "Регистрация";
-            this.RegButton.UseVisualStyleBackColor = true;
-            this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
             // 
             // MainForm
             // 

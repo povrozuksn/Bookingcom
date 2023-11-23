@@ -12,9 +12,12 @@ namespace Bookingcom
 {
     public partial class RoomForm : Form
     {
+        string id_room;
         public RoomForm(string idRoom)
         {
             InitializeComponent();
+
+            id_room = idRoom;
 
             List<string> rooms = SQLClass.MySelect("SELECT name, adress_pic, specification, id_hotel, area FROM rooms WHERE id = " + idRoom);
             List<string> hotel = SQLClass.MySelect("SELECT name FROM hotels WHERE id = " + rooms[3]);
@@ -25,7 +28,22 @@ namespace Bookingcom
             RoomPictureBox.Load("../../Pictures/" + rooms[1]);
             RoomTextBox.Text = rooms[2];
             SLabel.Text = rooms[4];
+
+            if(MainForm.Login != "")
+            {
+                CommentPanel.Visible = true;
+            }
+            else
+            {
+                CommentPanel.Visible = false;
+            }
         }
 
+        private void CommentButton_Click(object sender, EventArgs e)
+        {
+            SQLClass.MyUpDate("INSERT INTO ratingroom(comment, score, id_room, user) VALUES('" + CommentTextBox.Text + "', '" + CommentComboBox.Text + "', '" + id_room + "', '" + MainForm.Login + "')");
+            MessageBox.Show("Спасибо");
+            CommentPanel.Visible = false;
+        }
     }
 }

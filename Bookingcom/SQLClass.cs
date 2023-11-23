@@ -34,7 +34,7 @@ namespace Bookingcom
             return list;
         }
 
-        //Функция INSERT-запроса
+        //Функция INSERT/DELET/UPDATE-запроса
         public static void MyUpDate(string cmdText)
         {
             MySqlCommand cmd = new MySqlCommand(cmdText, CONN);

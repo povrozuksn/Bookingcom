@@ -22,6 +22,28 @@ namespace Bookingcom
 
             HotelTextBox.ReadOnly = !Convert.ToBoolean(MainForm.isAdmin);
             HotelTextBox.Enabled = Convert.ToBoolean(MainForm.isAdmin);
+
+            AdressTextBox.ReadOnly = !Convert.ToBoolean(MainForm.isAdmin);
+            AdressTextBox.Enabled = Convert.ToBoolean(MainForm.isAdmin);            
+            
+            TelTextBox.ReadOnly = !Convert.ToBoolean(MainForm.isAdmin);
+            TelTextBox.Enabled = Convert.ToBoolean(MainForm.isAdmin);
+
+            if(MainForm.isAdmin == 1)
+            {
+                AdressTextBox.BorderStyle = BorderStyle.FixedSingle;
+                TelTextBox.BorderStyle = BorderStyle.FixedSingle;
+                label1.Visible = true; 
+                label2.Visible = true;
+            }
+            else
+            {
+                AdressTextBox.BorderStyle = BorderStyle.None;
+                TelTextBox.BorderStyle = BorderStyle.None;
+                label1.Visible = false;
+                label2.Visible = false;
+            }
+
             AddDescButton.Visible = Convert.ToBoolean(MainForm.isAdmin);
 
             List<string> hotel = SQLClass.MySelect("SELECT * FROM hotels WHERE id = " + _idHotel);
@@ -47,8 +69,8 @@ namespace Bookingcom
                 x += 55;
             }
 
-            AdressLabel.Text = hotel[7];
-            TelLabel.Text = hotel[8];
+            AdressTextBox.Text = hotel[7];
+            TelTextBox.Text = hotel[8];
             #endregion
 
             #region Номера выбранной гостиницы на панеле InfoPanel
@@ -104,7 +126,7 @@ namespace Bookingcom
 
         private void AddDescButton_Click(object sender, EventArgs e)
         {
-            SQLClass.MyUpDate("UPDATE hotels SET desc = '" + HotelTextBox.Text + "' WHERE id = " + _idHotel);
+            SQLClass.MyUpDate("UPDATE hotels SET opisanie = '" + HotelTextBox.Text + "', adress = '" + AdressTextBox.Text + "', tel = '" + TelTextBox.Text + "' WHERE id = '" + _idHotel + "'");
             MessageBox.Show("Сохранено");
         }
     }
