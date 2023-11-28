@@ -47,7 +47,7 @@ namespace Bookingcom
             AddDescButton.Visible = Convert.ToBoolean(MainForm.isAdmin);
 
             List<string> hotel = SQLClass.MySelect("SELECT * FROM hotels WHERE id = " + _idHotel);
-            List<string> rooms = SQLClass.MySelect("SELECT id, name, adress_pic FROM rooms WHERE id_hotel = " + _idHotel);
+            List<string> rooms = SQLClass.MySelect("SELECT id, name, adress_pic, price, kol FROM rooms WHERE id_hotel = " + _idHotel);
 
             #region Выбранная гостиница на панеле HotelPanel 
             Text = hotel[1] + " : " + hotel[6];
@@ -75,7 +75,7 @@ namespace Bookingcom
 
             #region Номера выбранной гостиницы на панеле InfoPanel
             int x1 = 20;
-            for (int i = 0; i < rooms.Count; i += 3)
+            for (int i = 0; i < rooms.Count; i += 5)
             {
                 Label lbl = new Label();
                 lbl.Location = new Point(x1, 30);
@@ -98,6 +98,20 @@ namespace Bookingcom
                 pb.Tag = rooms[i];
                 pb.Click += new EventHandler(Room_Click);
                 InfoPanel.Controls.Add(pb);
+
+                Label lbl1 = new Label();
+                lbl1.Location = new Point(x1, 255);
+                lbl1.Size = new Size(120, 30);
+                lbl1.Font = new Font("Arial Narrow", 11);
+                lbl1.Text = "Цена, руб.  " + rooms[i + 3];
+                InfoPanel.Controls.Add(lbl1);
+
+                Label lbl2 = new Label();
+                lbl2.Location = new Point(x1+150, 255);
+                lbl2.Size = new Size(120, 30);
+                lbl2.Font = new Font("Arial Narrow", 11);
+                lbl2.Text = "Кол-во, шт.  " + rooms[i + 4];
+                InfoPanel.Controls.Add(lbl2);
 
                 x1 += 320;
             }

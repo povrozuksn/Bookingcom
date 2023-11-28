@@ -29,23 +29,31 @@
         private void InitializeComponent()
         {
             this.InfoPanel = new System.Windows.Forms.Panel();
-            this.SLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.RoomTextBox = new System.Windows.Forms.TextBox();
             this.RoomLabel = new System.Windows.Forms.Label();
             this.RoomPictureBox = new System.Windows.Forms.PictureBox();
             this.RoomPanel = new System.Windows.Forms.Panel();
+            this.CommentPanel = new System.Windows.Forms.Panel();
+            this.CommentButton = new System.Windows.Forms.Button();
+            this.CommentComboBox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CommentTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.BronButton = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.CommentPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.CommentTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.CommentComboBox = new System.Windows.Forms.ComboBox();
-            this.CommentButton = new System.Windows.Forms.Button();
+            this.SaveRoomButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.QuantityTextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.STextBox = new System.Windows.Forms.TextBox();
+            this.SaveParamButton = new System.Windows.Forms.Button();
             this.InfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomPictureBox)).BeginInit();
             this.RoomPanel.SuspendLayout();
@@ -54,7 +62,15 @@
             // 
             // InfoPanel
             // 
-            this.InfoPanel.Controls.Add(this.SLabel);
+            this.InfoPanel.Controls.Add(this.SaveParamButton);
+            this.InfoPanel.Controls.Add(this.STextBox);
+            this.InfoPanel.Controls.Add(this.label8);
+            this.InfoPanel.Controls.Add(this.QuantityTextBox);
+            this.InfoPanel.Controls.Add(this.label9);
+            this.InfoPanel.Controls.Add(this.label7);
+            this.InfoPanel.Controls.Add(this.PriceTextBox);
+            this.InfoPanel.Controls.Add(this.label6);
+            this.InfoPanel.Controls.Add(this.SaveRoomButton);
             this.InfoPanel.Controls.Add(this.label3);
             this.InfoPanel.Controls.Add(this.RoomTextBox);
             this.InfoPanel.Controls.Add(this.RoomLabel);
@@ -64,15 +80,6 @@
             this.InfoPanel.Name = "InfoPanel";
             this.InfoPanel.Size = new System.Drawing.Size(1037, 270);
             this.InfoPanel.TabIndex = 0;
-            // 
-            // SLabel
-            // 
-            this.SLabel.AutoSize = true;
-            this.SLabel.Location = new System.Drawing.Point(534, 226);
-            this.SLabel.Name = "SLabel";
-            this.SLabel.Size = new System.Drawing.Size(19, 25);
-            this.SLabel.TabIndex = 4;
-            this.SLabel.Text = "-";
             // 
             // label3
             // 
@@ -90,7 +97,7 @@
             this.RoomTextBox.Multiline = true;
             this.RoomTextBox.Name = "RoomTextBox";
             this.RoomTextBox.ReadOnly = true;
-            this.RoomTextBox.Size = new System.Drawing.Size(533, 126);
+            this.RoomTextBox.Size = new System.Drawing.Size(640, 102);
             this.RoomTextBox.TabIndex = 2;
             // 
             // RoomLabel
@@ -125,6 +132,68 @@
             this.RoomPanel.Name = "RoomPanel";
             this.RoomPanel.Size = new System.Drawing.Size(1037, 315);
             this.RoomPanel.TabIndex = 1;
+            // 
+            // CommentPanel
+            // 
+            this.CommentPanel.Controls.Add(this.CommentButton);
+            this.CommentPanel.Controls.Add(this.CommentComboBox);
+            this.CommentPanel.Controls.Add(this.label5);
+            this.CommentPanel.Controls.Add(this.CommentTextBox);
+            this.CommentPanel.Controls.Add(this.label4);
+            this.CommentPanel.Location = new System.Drawing.Point(168, 116);
+            this.CommentPanel.Name = "CommentPanel";
+            this.CommentPanel.Size = new System.Drawing.Size(736, 187);
+            this.CommentPanel.TabIndex = 5;
+            // 
+            // CommentButton
+            // 
+            this.CommentButton.Location = new System.Drawing.Point(577, 115);
+            this.CommentButton.Name = "CommentButton";
+            this.CommentButton.Size = new System.Drawing.Size(142, 58);
+            this.CommentButton.TabIndex = 4;
+            this.CommentButton.Text = "Отправить";
+            this.CommentButton.UseVisualStyleBackColor = true;
+            this.CommentButton.Click += new System.EventHandler(this.CommentButton_Click);
+            // 
+            // CommentComboBox
+            // 
+            this.CommentComboBox.FormattingEnabled = true;
+            this.CommentComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.CommentComboBox.Location = new System.Drawing.Point(577, 41);
+            this.CommentComboBox.Name = "CommentComboBox";
+            this.CommentComboBox.Size = new System.Drawing.Size(142, 33);
+            this.CommentComboBox.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(572, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 25);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Ваша оценка:";
+            // 
+            // CommentTextBox
+            // 
+            this.CommentTextBox.Location = new System.Drawing.Point(15, 41);
+            this.CommentTextBox.Multiline = true;
+            this.CommentTextBox.Name = "CommentTextBox";
+            this.CommentTextBox.Size = new System.Drawing.Size(538, 133);
+            this.CommentTextBox.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Оставьте отзыв";
             // 
             // BronButton
             // 
@@ -169,67 +238,86 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Дата заезда";
             // 
-            // CommentPanel
+            // SaveRoomButton
             // 
-            this.CommentPanel.Controls.Add(this.CommentButton);
-            this.CommentPanel.Controls.Add(this.CommentComboBox);
-            this.CommentPanel.Controls.Add(this.label5);
-            this.CommentPanel.Controls.Add(this.CommentTextBox);
-            this.CommentPanel.Controls.Add(this.label4);
-            this.CommentPanel.Location = new System.Drawing.Point(168, 116);
-            this.CommentPanel.Name = "CommentPanel";
-            this.CommentPanel.Size = new System.Drawing.Size(736, 187);
-            this.CommentPanel.TabIndex = 5;
+            this.SaveRoomButton.Location = new System.Drawing.Point(904, 34);
+            this.SaveRoomButton.Name = "SaveRoomButton";
+            this.SaveRoomButton.Size = new System.Drawing.Size(121, 35);
+            this.SaveRoomButton.TabIndex = 5;
+            this.SaveRoomButton.Text = "Сохранить";
+            this.SaveRoomButton.UseVisualStyleBackColor = true;
+            this.SaveRoomButton.Click += new System.EventHandler(this.SaveRoomButton_Click);
             // 
-            // label4
+            // label6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Оставьте отзыв";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(385, 189);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 25);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Цена:";
             // 
-            // CommentTextBox
+            // PriceTextBox
             // 
-            this.CommentTextBox.Location = new System.Drawing.Point(15, 41);
-            this.CommentTextBox.Multiline = true;
-            this.CommentTextBox.Name = "CommentTextBox";
-            this.CommentTextBox.Size = new System.Drawing.Size(538, 133);
-            this.CommentTextBox.TabIndex = 1;
+            this.PriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PriceTextBox.Location = new System.Drawing.Point(455, 189);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(116, 23);
+            this.PriceTextBox.TabIndex = 7;
+            this.PriceTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PriceTextBox_KeyDown);
             // 
-            // label5
+            // label7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(572, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 25);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Ваша оценка:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(577, 189);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 25);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "руб.";
             // 
-            // CommentComboBox
+            // label8
             // 
-            this.CommentComboBox.FormattingEnabled = true;
-            this.CommentComboBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.CommentComboBox.Location = new System.Drawing.Point(577, 41);
-            this.CommentComboBox.Name = "CommentComboBox";
-            this.CommentComboBox.Size = new System.Drawing.Size(142, 33);
-            this.CommentComboBox.TabIndex = 3;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(958, 189);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 25);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "шт.";
             // 
-            // CommentButton
+            // QuantityTextBox
             // 
-            this.CommentButton.Location = new System.Drawing.Point(577, 115);
-            this.CommentButton.Name = "CommentButton";
-            this.CommentButton.Size = new System.Drawing.Size(142, 58);
-            this.CommentButton.TabIndex = 4;
-            this.CommentButton.Text = "Отправить";
-            this.CommentButton.UseVisualStyleBackColor = true;
-            this.CommentButton.Click += new System.EventHandler(this.CommentButton_Click);
+            this.QuantityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.QuantityTextBox.Location = new System.Drawing.Point(837, 189);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.Size = new System.Drawing.Size(116, 23);
+            this.QuantityTextBox.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(701, 192);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 25);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Количество:";
+            // 
+            // STextBox
+            // 
+            this.STextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.STextBox.Location = new System.Drawing.Point(547, 228);
+            this.STextBox.Name = "STextBox";
+            this.STextBox.Size = new System.Drawing.Size(78, 23);
+            this.STextBox.TabIndex = 12;
+            // 
+            // SaveParamButton
+            // 
+            this.SaveParamButton.Location = new System.Drawing.Point(904, 226);
+            this.SaveParamButton.Name = "SaveParamButton";
+            this.SaveParamButton.Size = new System.Drawing.Size(121, 35);
+            this.SaveParamButton.TabIndex = 13;
+            this.SaveParamButton.Text = "Сохранить";
+            this.SaveParamButton.UseVisualStyleBackColor = true;
+            this.SaveParamButton.Click += new System.EventHandler(this.SaveParamButton_Click);
             // 
             // RoomForm
             // 
@@ -265,7 +353,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label SLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel CommentPanel;
         private System.Windows.Forms.Button CommentButton;
@@ -273,5 +360,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox CommentTextBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox QuantityTextBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox PriceTextBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button SaveRoomButton;
+        private System.Windows.Forms.Button SaveParamButton;
+        private System.Windows.Forms.TextBox STextBox;
     }
 }
