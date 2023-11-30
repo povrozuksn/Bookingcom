@@ -13,6 +13,7 @@ namespace Bookingcom
     public partial class RoomForm : Form
     {
         string id_room;
+        int kol = 0;
         public RoomForm(string idRoom)
         {
             InitializeComponent();
@@ -33,18 +34,6 @@ namespace Bookingcom
             STextBox.Enabled = Convert.ToBoolean(MainForm.isAdmin);
 
             id_room = idRoom;
-
-            List<string> rooms = SQLClass.MySelect("SELECT name, adress_pic, specification, id_hotel, area, price, kol FROM rooms WHERE id = " + idRoom);
-            List<string> hotel = SQLClass.MySelect("SELECT name FROM hotels WHERE id = " + rooms[3]);
-
-            Text = hotel[0] + ": " + rooms[0];
-            RoomLabel.Text = hotel[0] + ": " + rooms[0];
-
-            RoomPictureBox.Load("../../Pictures/" + rooms[1]);
-            RoomTextBox.Text = rooms[2];
-            PriceTextBox.Text = rooms[5];
-            QuantityTextBox.Text = rooms[6];
-            STextBox.Text = rooms[4];
 
             if(MainForm.Login != "")
             {
@@ -85,6 +74,48 @@ namespace Bookingcom
                 MessageBox.Show("Сохранено");
             }
 
+        }
+
+        private void RoomForm_Load(object sender, EventArgs e)
+        {
+            List<string> rooms = SQLClass.MySelect("SELECT name, adress_pic, specification, id_hotel, area, price, kol FROM rooms WHERE id = " + id_room);
+            List<string> hotel = SQLClass.MySelect("SELECT name FROM hotels WHERE id = " + rooms[3]);
+            
+            Text = hotel[0] + ": " + rooms[0];
+            RoomLabel.Text = hotel[0] + ": " + rooms[0];
+
+            RoomPictureBox.Load("../../Pictures/" + rooms[1]);
+            RoomTextBox.Text = rooms[2];
+            PriceTextBox.Text = rooms[5];
+            QuantityTextBox.Text = rooms[6];
+            kol = Convert.ToInt32(rooms[6]);
+            STextBox.Text = rooms[4];
+        }
+
+        private void BronButton_Click(object sender, EventArgs e)
+        {
+            #region Проверки корректрости
+            if(MainForm.Login == "")
+            {
+                MessageBox.Show("Вы не авторизованы");
+                return;
+            }
+
+            DateTime dt = DTfrom.Value;
+            while(dt <= DTto.Value.AddDays(0.5))
+            {
+                List<string> exitBooking = SQLClass.MySelect("SELECT COUNT(*) FROM booking WHERE dateFrom <= '" + dt.ToString("yyyy-MM-dd") + "' AND dateTo >= '" + dt.ToString("yyyy-MM-dd") + "'");
+                if (Convert.ToInt32(exitBooking[0]) >= kol)
+                {
+                    MessageBox.Show("Мест нет. Выберите другие даты.");
+                    return;
+                }
+                dt = dt.AddDays(1);
+            }
+            #endregion
+
+            SQLClass.MyUpDate("INSERT INTO booking(user, dateFrom, dateTo, room_id) VALUES ('" + MainForm.Login + "', '" + DTfrom.Value.ToString("yyyy-MM-dd") + "', '" + DTto.Value.ToString("yyyy-MM-dd") + "', '" + id_room + "')");
+            MessageBox.Show("Успешно");
         }
     }
 }

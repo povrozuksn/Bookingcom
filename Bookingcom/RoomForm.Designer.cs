@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.InfoPanel = new System.Windows.Forms.Panel();
+            this.SaveParamButton = new System.Windows.Forms.Button();
+            this.STextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.QuantityTextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.SaveRoomButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.RoomTextBox = new System.Windows.Forms.TextBox();
             this.RoomLabel = new System.Windows.Forms.Label();
@@ -41,19 +50,10 @@
             this.CommentTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.BronButton = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.DTto = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DTfrom = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.SaveRoomButton = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.PriceTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.QuantityTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.STextBox = new System.Windows.Forms.TextBox();
-            this.SaveParamButton = new System.Windows.Forms.Button();
             this.InfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomPictureBox)).BeginInit();
             this.RoomPanel.SuspendLayout();
@@ -80,6 +80,87 @@
             this.InfoPanel.Name = "InfoPanel";
             this.InfoPanel.Size = new System.Drawing.Size(1037, 270);
             this.InfoPanel.TabIndex = 0;
+            // 
+            // SaveParamButton
+            // 
+            this.SaveParamButton.Location = new System.Drawing.Point(904, 226);
+            this.SaveParamButton.Name = "SaveParamButton";
+            this.SaveParamButton.Size = new System.Drawing.Size(121, 35);
+            this.SaveParamButton.TabIndex = 13;
+            this.SaveParamButton.Text = "Сохранить";
+            this.SaveParamButton.UseVisualStyleBackColor = true;
+            this.SaveParamButton.Click += new System.EventHandler(this.SaveParamButton_Click);
+            // 
+            // STextBox
+            // 
+            this.STextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.STextBox.Location = new System.Drawing.Point(547, 228);
+            this.STextBox.Name = "STextBox";
+            this.STextBox.Size = new System.Drawing.Size(78, 23);
+            this.STextBox.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(958, 189);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 25);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "шт.";
+            // 
+            // QuantityTextBox
+            // 
+            this.QuantityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.QuantityTextBox.Location = new System.Drawing.Point(837, 189);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.Size = new System.Drawing.Size(116, 23);
+            this.QuantityTextBox.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(701, 192);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 25);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Количество:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(577, 189);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 25);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "руб.";
+            // 
+            // PriceTextBox
+            // 
+            this.PriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PriceTextBox.Location = new System.Drawing.Point(455, 189);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(116, 23);
+            this.PriceTextBox.TabIndex = 7;
+            this.PriceTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PriceTextBox_KeyDown);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(385, 189);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 25);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Цена:";
+            // 
+            // SaveRoomButton
+            // 
+            this.SaveRoomButton.Location = new System.Drawing.Point(904, 34);
+            this.SaveRoomButton.Name = "SaveRoomButton";
+            this.SaveRoomButton.Size = new System.Drawing.Size(121, 35);
+            this.SaveRoomButton.TabIndex = 5;
+            this.SaveRoomButton.Text = "Сохранить";
+            this.SaveRoomButton.UseVisualStyleBackColor = true;
+            this.SaveRoomButton.Click += new System.EventHandler(this.SaveRoomButton_Click);
             // 
             // label3
             // 
@@ -123,9 +204,9 @@
             // 
             this.RoomPanel.Controls.Add(this.CommentPanel);
             this.RoomPanel.Controls.Add(this.BronButton);
-            this.RoomPanel.Controls.Add(this.dateTimePicker2);
+            this.RoomPanel.Controls.Add(this.DTto);
             this.RoomPanel.Controls.Add(this.label2);
-            this.RoomPanel.Controls.Add(this.dateTimePicker1);
+            this.RoomPanel.Controls.Add(this.DTfrom);
             this.RoomPanel.Controls.Add(this.label1);
             this.RoomPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RoomPanel.Location = new System.Drawing.Point(0, 270);
@@ -203,13 +284,14 @@
             this.BronButton.TabIndex = 4;
             this.BronButton.Text = "Забронировать";
             this.BronButton.UseVisualStyleBackColor = true;
+            this.BronButton.Click += new System.EventHandler(this.BronButton_Click);
             // 
-            // dateTimePicker2
+            // DTto
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(353, 58);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(291, 30);
-            this.dateTimePicker2.TabIndex = 3;
+            this.DTto.Location = new System.Drawing.Point(353, 58);
+            this.DTto.Name = "DTto";
+            this.DTto.Size = new System.Drawing.Size(291, 30);
+            this.DTto.TabIndex = 3;
             // 
             // label2
             // 
@@ -221,12 +303,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Дата выезда";
             // 
-            // dateTimePicker1
+            // DTfrom
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(353, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(291, 30);
-            this.dateTimePicker1.TabIndex = 1;
+            this.DTfrom.Location = new System.Drawing.Point(353, 22);
+            this.DTfrom.Name = "DTfrom";
+            this.DTfrom.Size = new System.Drawing.Size(291, 30);
+            this.DTfrom.TabIndex = 1;
             // 
             // label1
             // 
@@ -237,87 +319,6 @@
             this.label1.Size = new System.Drawing.Size(105, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Дата заезда";
-            // 
-            // SaveRoomButton
-            // 
-            this.SaveRoomButton.Location = new System.Drawing.Point(904, 34);
-            this.SaveRoomButton.Name = "SaveRoomButton";
-            this.SaveRoomButton.Size = new System.Drawing.Size(121, 35);
-            this.SaveRoomButton.TabIndex = 5;
-            this.SaveRoomButton.Text = "Сохранить";
-            this.SaveRoomButton.UseVisualStyleBackColor = true;
-            this.SaveRoomButton.Click += new System.EventHandler(this.SaveRoomButton_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(385, 189);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 25);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Цена:";
-            // 
-            // PriceTextBox
-            // 
-            this.PriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PriceTextBox.Location = new System.Drawing.Point(455, 189);
-            this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(116, 23);
-            this.PriceTextBox.TabIndex = 7;
-            this.PriceTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PriceTextBox_KeyDown);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(577, 189);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 25);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "руб.";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(958, 189);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 25);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "шт.";
-            // 
-            // QuantityTextBox
-            // 
-            this.QuantityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.QuantityTextBox.Location = new System.Drawing.Point(837, 189);
-            this.QuantityTextBox.Name = "QuantityTextBox";
-            this.QuantityTextBox.Size = new System.Drawing.Size(116, 23);
-            this.QuantityTextBox.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(701, 192);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Количество:";
-            // 
-            // STextBox
-            // 
-            this.STextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.STextBox.Location = new System.Drawing.Point(547, 228);
-            this.STextBox.Name = "STextBox";
-            this.STextBox.Size = new System.Drawing.Size(78, 23);
-            this.STextBox.TabIndex = 12;
-            // 
-            // SaveParamButton
-            // 
-            this.SaveParamButton.Location = new System.Drawing.Point(904, 226);
-            this.SaveParamButton.Name = "SaveParamButton";
-            this.SaveParamButton.Size = new System.Drawing.Size(121, 35);
-            this.SaveParamButton.TabIndex = 13;
-            this.SaveParamButton.Text = "Сохранить";
-            this.SaveParamButton.UseVisualStyleBackColor = true;
-            this.SaveParamButton.Click += new System.EventHandler(this.SaveParamButton_Click);
             // 
             // RoomForm
             // 
@@ -330,6 +331,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RoomForm";
             this.Text = "RoomForm";
+            this.Load += new System.EventHandler(this.RoomForm_Load);
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomPictureBox)).EndInit();
@@ -350,9 +352,9 @@
         private System.Windows.Forms.Panel RoomPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BronButton;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker DTto;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DTfrom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel CommentPanel;
         private System.Windows.Forms.Button CommentButton;
