@@ -19,3 +19,4 @@ C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminHotel
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminRoomsForm.resources
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminUsersForm.resources
 C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.RegForm.resources
+C:\Users\root\source\repos\Bookingcom\Bookingcom\obj\Debug\Bookingcom.AdminBookingForm.resources

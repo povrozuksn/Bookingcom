@@ -33,11 +33,12 @@
             this.AdminRoomsButton = new System.Windows.Forms.Button();
             this.AdminUsersButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.AdminBookingButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AdminCityButton
             // 
-            this.AdminCityButton.Location = new System.Drawing.Point(134, 115);
+            this.AdminCityButton.Location = new System.Drawing.Point(134, 116);
             this.AdminCityButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AdminCityButton.Name = "AdminCityButton";
             this.AdminCityButton.Size = new System.Drawing.Size(233, 61);
@@ -48,7 +49,7 @@
             // 
             // AdminHotelsButton
             // 
-            this.AdminHotelsButton.Location = new System.Drawing.Point(134, 209);
+            this.AdminHotelsButton.Location = new System.Drawing.Point(134, 187);
             this.AdminHotelsButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AdminHotelsButton.Name = "AdminHotelsButton";
             this.AdminHotelsButton.Size = new System.Drawing.Size(233, 61);
@@ -59,7 +60,7 @@
             // 
             // AdminRoomsButton
             // 
-            this.AdminRoomsButton.Location = new System.Drawing.Point(134, 306);
+            this.AdminRoomsButton.Location = new System.Drawing.Point(134, 258);
             this.AdminRoomsButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AdminRoomsButton.Name = "AdminRoomsButton";
             this.AdminRoomsButton.Size = new System.Drawing.Size(233, 61);
@@ -70,7 +71,7 @@
             // 
             // AdminUsersButton
             // 
-            this.AdminUsersButton.Location = new System.Drawing.Point(134, 406);
+            this.AdminUsersButton.Location = new System.Drawing.Point(134, 329);
             this.AdminUsersButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AdminUsersButton.Name = "AdminUsersButton";
             this.AdminUsersButton.Size = new System.Drawing.Size(233, 61);
@@ -88,12 +89,24 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Форма администрирования БД";
             // 
+            // AdminBookingButton
+            // 
+            this.AdminBookingButton.Location = new System.Drawing.Point(134, 400);
+            this.AdminBookingButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AdminBookingButton.Name = "AdminBookingButton";
+            this.AdminBookingButton.Size = new System.Drawing.Size(233, 61);
+            this.AdminBookingButton.TabIndex = 5;
+            this.AdminBookingButton.Text = "Бронирования";
+            this.AdminBookingButton.UseVisualStyleBackColor = true;
+            this.AdminBookingButton.Click += new System.EventHandler(this.AdminBookingButton_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(506, 513);
+            this.Controls.Add(this.AdminBookingButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AdminUsersButton);
             this.Controls.Add(this.AdminRoomsButton);
@@ -116,5 +129,6 @@
         private System.Windows.Forms.Button AdminRoomsButton;
         private System.Windows.Forms.Button AdminUsersButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button AdminBookingButton;
     }
 }

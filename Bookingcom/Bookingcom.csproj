@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminBookingForm.Designer.cs">
+      <DependentUpon>AdminBookingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminCityForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
       <DependentUpon>RoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLClass.cs" />
+    <EmbeddedResource Include="AdminBookingForm.resx">
+      <DependentUpon>AdminBookingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminCityForm.resx">
       <DependentUpon>AdminCityForm.cs</DependentUpon>
     </EmbeddedResource>
