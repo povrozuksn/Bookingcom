@@ -42,6 +42,9 @@ namespace Bookingcom
                 lbl.Location = new Point(10, y);
                 lbl.Size = new Size(150, 25);
                 lbl.Text = bookinglist[i+1];
+                lbl.Tag = bookinglist[i];
+                lbl.AccessibleName = bookinglist[i+2];
+                lbl.AccessibleDescription = bookinglist[i+3];
                 InfoBookingPanel.Controls.Add(lbl);
                 #endregion
 
@@ -77,9 +80,43 @@ namespace Bookingcom
                 InfoBookingPanel.Controls.Add(lbl4);
                 #endregion
 
+                #region Удаление бронирования
+                Button btn = new Button();
+                btn.Location = new Point(1200, y);
+                btn.Size = new Size(100, 30);
+                btn.Font = new Font("Arial Narrow", 12);
+                btn.Click += new EventHandler(DeleteBookingClick);
+                btn.Text = "Удалить";
+                InfoBookingPanel.Controls.Add(btn);
+                #endregion
+
                 y += 30;
             }
 
+        }
+
+        private void DeleteBookingClick(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int y = btn.Location.Y;
+
+            foreach (Control control in InfoBookingPanel.Controls)
+            {
+                if (control.Location == new Point(10, y))
+                {
+                    SQLClass.MyUpDate(
+                        "DELETE FROM booking" +
+                        " WHERE user = '" + control.Text + "'" +
+                        " AND room_id = '" + control.Tag + "'" +
+                        " AND dateFrom = '" + Convert.ToDateTime(control.AccessibleName).ToString("yyyy-MM-dd") + "'" +
+                        " AND dateTo = '" + Convert.ToDateTime(control.AccessibleDescription).ToString("yyyy-MM-dd") + "'");
+                    
+                                   
+                    
+                    MessageBox.Show("Удаление успешно");
+                    AdminBookingForm_Load(sender, e);
+                }
+            }
         }
     }
 }
